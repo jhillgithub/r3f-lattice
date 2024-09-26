@@ -1,13 +1,27 @@
-import { Torus } from "@react-three/drei";
-import { useEffect, useRef, useState } from "react";
-import { DoubleSide, Mesh, Vector3 } from "three";
+import {
+  ComponentType,
+  ReactElement,
+  cloneElement,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+import { Mesh, Vector3 } from "three";
 import { useMeshVoxels } from "../hooks/useMeshVoxels";
-import LatticeCell from "./LatticeCell";
 
-type LatticeProps = {
+type LatticeProps<CellProps> = {
   cellSize: number;
+  children: ReactElement;
+  CellComponent: ComponentType<CellProps>;
+  cellProps?: CellProps;
 };
-const Lattice = ({ cellSize }: LatticeProps) => {
+
+const Lattice = <CellProps,>({
+  cellSize,
+  children,
+  CellComponent,
+  cellProps = {} as CellProps,
+}: LatticeProps<CellProps>) => {
   const [points, setPoints] = useState<Vector3[]>([]);
   const meshRef = useRef<Mesh>(null);
   const { calculateVoxelPoints } = useMeshVoxels();
@@ -19,13 +33,15 @@ const Lattice = ({ cellSize }: LatticeProps) => {
     setPoints(voxelPoints);
   }, [calculateVoxelPoints, cellSize]);
 
+  const meshWithRef = cloneElement(children, { ref: meshRef });
+
   return (
     <>
-      <Torus ref={meshRef}>
-        <meshStandardMaterial wireframe side={DoubleSide} />
-      </Torus>
+      {meshWithRef}
       {points.map((point, index) => (
-        <LatticeCell key={index} position={point} size={cellSize} />
+        <group key={index} position={point} scale={cellSize}>
+          <CellComponent key={index} {...cellProps} />
+        </group>
       ))}
     </>
   );
