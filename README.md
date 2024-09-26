@@ -21,3 +21,9 @@ This is an experiement to see if you can create a volume lattice by voxelizing a
 ### Example of RoundedBox as Star cell
 
 ![alt text](docs/rounded-box-star.png)
+
+## Example of Hexagon as cell
+
+![alt text](docs/hexagon-front.png)
+
+![alt text](docs/hexagon.png)

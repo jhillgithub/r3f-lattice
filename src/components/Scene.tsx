@@ -1,4 +1,4 @@
-import { RoundedBox, Torus } from "@react-three/drei";
+import { Cylinder, RoundedBox, Torus } from "@react-three/drei";
 import { DoubleSide, MeshNormalMaterial } from "three";
 import Lattice from "./Lattice";
 import Lights from "./Lights";
@@ -14,10 +14,10 @@ const Scene = () => {
       </Lattice> */}
       <Lattice
         cellSize={0.2}
-        CellComponent={RoundedBox}
+        CellComponent={Cylinder}
         cellProps={{
-          args: [1, 1, 1],
-          radius: 0.8,
+          args: [0.55, 0.55, 1, 8],
+          rotation: [Math.PI / 2, Math.PI / 8, 0],
           material: new MeshNormalMaterial(),
         }}
       >
