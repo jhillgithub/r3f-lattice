@@ -29,3 +29,9 @@ This is an experiement to see if you can create a volume lattice by voxelizing a
 ![Example of Hexagon as cell](docs/hexagon-front.png)
 
 ![Example of Hexagon as cell profile view](docs/hexagon.png)
+
+## Example of better hexagon cell
+
+![Example of better hexagon cell](docs/better-hexagon-cell.png)
+
+![Example of better hexagon lattice](docs/better-hexagon-lattice.png)
