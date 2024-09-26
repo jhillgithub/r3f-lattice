@@ -6,24 +6,26 @@ This is an experiement to see if you can create a volume lattice by voxelizing a
 
 ### Example of a single lattice cell
 
-![alt text](docs/lattice-cell.png)
+![Example of a single lattice cell](docs/lattice-cell.png)
 
 ### Example of a voxelized mesh that uses the lattice cells
 
-![alt text](docs/screenshot.png)
+![Example of a voxelized mesh that uses the lattice cells](docs/screenshot.png)
+
+![Profile view of lattice cells](docs/lattice.png)
 
 ---
 
 ### Example of RoundedBox as cell
 
-![alt text](docs/rounded-box.png)
+![Example of RoundedBox as cell](docs/rounded-box.png)
 
 ### Example of RoundedBox as Star cell
 
-![alt text](docs/rounded-box-star.png)
+![ Example of RoundedBox as Star cell](docs/rounded-box-star.png)
 
 ## Example of Hexagon as cell
 
-![alt text](docs/hexagon-front.png)
+![Example of Hexagon as cell](docs/hexagon-front.png)
 
-![alt text](docs/hexagon.png)
+![Example of Hexagon as cell profile view](docs/hexagon.png)

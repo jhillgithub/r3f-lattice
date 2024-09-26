@@ -2,17 +2,18 @@ import { Cylinder, RoundedBox, Torus } from "@react-three/drei";
 import { DoubleSide, MeshNormalMaterial } from "three";
 import Lattice from "./Lattice";
 import Lights from "./Lights";
+import LatticeCell from "./LatticeCell";
 
 const Scene = () => {
   return (
     <>
       <Lights />
-      {/* <Lattice cellSize={0.2} CellComponent={LatticeCell}>
+      <Lattice cellSize={0.2} CellComponent={LatticeCell}>
         <Torus>
           <meshStandardMaterial wireframe side={DoubleSide} />
         </Torus>
-      </Lattice> */}
-      <Lattice
+      </Lattice>
+      {/* <Lattice
         cellSize={0.2}
         CellComponent={Cylinder}
         cellProps={{
@@ -24,7 +25,7 @@ const Scene = () => {
         <Torus>
           <meshStandardMaterial wireframe side={DoubleSide} />
         </Torus>
-      </Lattice>
+      </Lattice> */}
     </>
   );
 };
