@@ -5,7 +5,7 @@ import { Vector3 } from "three";
 
 type LatticeProps = { size: number } & GroupProps;
 
-const LatticeCell = ({ size, ...groupProps }: LatticeProps) => {
+const LatticeCell = ({ size = 1, ...groupProps }: LatticeProps) => {
   const corners = useMemo(() => {
     const halfSize = size / 2;
 
