@@ -2,4 +2,12 @@
 
 This is an experiement to see if you can create a volume lattice by voxelizing a mesh and using lattice cells with overlapping vertices.
 
+## Screenshots
+
+### Example of a single lattice cell
+
+![alt text](docs/lattice-cell.png)
+
+### Example of a voxelized mesh that uses the lattice cells
+
 ![alt text](docs/screenshot.png)
