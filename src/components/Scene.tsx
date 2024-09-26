@@ -3,16 +3,18 @@ import { DoubleSide, MeshNormalMaterial } from "three";
 import Lattice from "./Lattice";
 import Lights from "./Lights";
 import LatticeCell from "./LatticeCell";
+import HexagonTile from "./HexagonTile";
 
 const Scene = () => {
   return (
     <>
       <Lights />
-      <Lattice cellSize={0.2} CellComponent={LatticeCell}>
+      <HexagonTile />
+      {/* <Lattice cellSize={0.2} CellComponent={LatticeCell}>
         <Torus>
           <meshStandardMaterial wireframe side={DoubleSide} />
         </Torus>
-      </Lattice>
+      </Lattice> */}
       {/* <Lattice
         cellSize={0.2}
         CellComponent={Cylinder}
