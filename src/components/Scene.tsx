@@ -1,6 +1,6 @@
 import { Torus } from "@react-three/drei";
 import { DoubleSide } from "three";
-import HexagonCell from "./HexagoneCell";
+import HexagonCell from "./HexagonCell";
 import Lattice from "./Lattice";
 import Lights from "./Lights";
 

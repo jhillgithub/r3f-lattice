@@ -28,8 +28,6 @@ const HexagonTile = ({
     [shape, extrusionDepth]
   );
 
-  geometry.center();
-
   return (
     <mesh geometry={geometry} {...props}>
       <meshNormalMaterial />
